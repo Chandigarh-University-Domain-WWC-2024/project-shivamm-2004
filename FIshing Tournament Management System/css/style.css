@@ -1,0 +1,139 @@
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+
+button {
+    font-size: 10px;
+    border: 2px solid black;
+    height: 20px;
+    width: 40px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.restart {
+    width: 90px;
+}
+
+button:hover {
+    background-color: #A9A9A9;
+}
+
+.title {
+    font-size: 30px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    width: 600px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.container {
+    height: 690px;
+    width: 800px;
+    border: 5px solid black;
+    display: grid;
+    grid-template-rows: 600px 90px;
+    grid-template-columns: 1.5fr .5fr .5fr .5fr .5fr .5fr .75fr;
+    grid-template-areas: "canvas canvas canvas canvas canvas canvas canvas"
+                        "0 1 2 3 4 5 6";
+}
+
+.hud {
+    border: 7px double black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 10px;
+    background-color: #D8D8D8;
+    margin-bottom: -1px;
+}
+
+main {
+    background-image: url("https://i.imgur.com/7j3LOeG.gif");
+    background-size: 10%;
+    background-repeat: repeat;
+    grid-area: canvas;
+}
+
+#0 {
+    grid-area: 0;
+}
+
+#1 {
+    grid-area: 1;
+}
+
+#2 {
+    grid-area: 2;
+}
+
+#3 {
+    grid-area: 3;
+}
+
+#4 {
+    grid-area: 4;
+}
+
+#5 {
+    grid-area: 6;
+}
+
+.hi-score {
+    position: absolute;
+    font-size: 12px;
+    padding: 2px;
+    margin-top: 586px;
+
+}
+
+.karp-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    opacity: 0;
+    margin-top: 11%;
+    margin-left: 15%;
+}
+
+.karp {
+    width: 175px;
+}
+
+.fish-text-animation, .fish-text-animation-weight {
+    display: flex;
+    font-size: small;
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 3;}
+}
+
+@keyframes fade-out {
+    from {opacity: 3;}
+    to {opacity: 0;
+    }
+}
+
